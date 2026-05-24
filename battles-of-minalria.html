@@ -22,6 +22,7 @@
         .container {
             max-width: 800px;
             margin: auto;
+            align-items: center;
         }
 
         .tag {
@@ -42,12 +43,25 @@
             padding: 20px;
             border-radius: 12px;
         }
+
+        .currencySelect {
+            align-self: right;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <a href="index.html">Back</a>
+
+        <div class="currencySelect">
+            <select id="currencySelect">
+                <option value="EUR">EUR (€)</option>
+                <option value="USD">USD ($)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="SEK">SEK (kr)</option>
+            </select>
+        </div>
 
         <h1>Battles of Minalria</h1>
         <div class="tag">Tabletop Game - In Development</div>
