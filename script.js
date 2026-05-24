@@ -9,7 +9,7 @@ const symbols = {
 }
 
 async function loadRates() {
-    const res = await fetch("https://api.frankfurther.app/v2/rates?base=EUR&quotes=USD,GBP,SEK");
+    const res = await fetch("https://api.frankfurter.app/v2/rates?base=EUR&quotes=USD,GBP,SEK");
 
     const data = await res.json();
 
