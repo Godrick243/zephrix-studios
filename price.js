@@ -8,7 +8,7 @@ const symbols = {
     SEK: "kr"
 }
 
-async function loadrates() {
+async function loadRates() {
     const res = await fetch("https://api.frankfurther.app/v2/rates?base=EUR&quotes=USD,GBP,SEK");
 
     const data = await res.json();
