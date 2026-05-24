@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Zephrix Studio's</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f0f12;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #15151b;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #1b1b25, #0f0f12);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            opacity: 0.8;
+            max-width: 600px;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-category {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .project-category h3 {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            border-left: 3px solid #4f7cff;
+            padding-left: 10px;
+        }
+
+        .card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+
+            background: #1a1a22;
+            border: 1px solid rgba(255, 255, 255,0.08);
+            padding: 20px;
+            border-radius: 10px;
+
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(79,124,255,0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #15151b;
+            opacity: 0.8;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #4f7cff;
+            color: white;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        button:hover {
+            background: #3d63cc;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div><strong>Zephrix Studio's</strong></div>
+        <nav>
+            <a href="#about" onclick="document.getElementById('about').scrollIntoView({behaviour:'smooth'})">About</a>
+            <a href="#projects"onclick="document.getElementById('projects').scrollIntoView({behaviour:'smooth'})">Projects</a>
+            <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behaviour:'smooth'})">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>We Build Fun Games That Last</h1>
+        <p>We're a small indie creative studio focused on digital and tabletop games.</p>
+        <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+            View Work
+        </button>
+    </div>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            We're a small studio that currently only consists of one person. We make Digital and Tabletop games. We've been doing this for about 2 years now.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-category">
+                <h3>Tabletop Games</h3>
+                <a class="card" href="./battles-of-minalria.html">
+                    <h3>Battles of Minalria</h3>
+                    <p>A tabletop PvP battler focused around mana where the last person left living wins.</p>
+                    <h5>Release Date: Unknown</h5>
+                </a>
+                <div></div>
+            </div>
+
+            <div class="project-category">
+                <h3>Digital Games</h3>
+                <a class="card" href="./kinetica.html">
+                    <h3>Kinetica</h3>
+                    <p>A minimalist 2D platformer focused on using momentum to your advantage.</p>
+                    <h5>Release Date: Unknown</h5>
+                </a>
+
+                <a class="card" href="./FPGA.html">
+                    <h3>FPGA: Funky Infinity Gauntlet Axolotls</h3>
+                    <p>A 3D PvP game where everyone's a cute little Axolotl with a Power Gauntlet, and where each round gets more and more terrifying.</p>
+                    <h5>Release Date: Unknown</h5>
+                </a>
+                <div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>For collaborations, publishing, or playtesting:</p>
+        <p><strong>godrick.yt.3@gmail.com</strong></p>
+    </section>
+
+    
+    <script data-goatcounter="https://godrick.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+
+    <footer>
+        © 2026 Zephrix Studio's. All rights reserved.
+    </footer>
+</body>
+</html>
