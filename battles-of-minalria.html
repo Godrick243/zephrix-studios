@@ -22,7 +22,8 @@
         .container {
             max-width: 800px;
             margin: auto;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
         }
 
         .tag {
@@ -39,22 +40,38 @@
 
         .box {
             background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,2550.08);
+            border: 1px solid rgba(255,255,255, 0.08);
             padding: 20px;
             border-radius: 12px;
         }
 
-        .currencySelect {
-            align-self: right;
+        select {
+            background-color: rgba(255,255,255, 0.08);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+
+        option {
+            background-color: #111;
+            color: white;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+        }
+
+        #currencySelect {
+            margin-left: auto;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <a href="index.html">Back</a>
+        <div class="topbar">
+            <a href="index.html">Back</a>
 
-        <div class="currencySelect">
             <select id="currencySelect">
                 <option value="EUR">EUR (€)</option>
                 <option value="USD">USD ($)</option>

@@ -65,6 +65,7 @@ window.onload = () => {
 
     if (saved) {
         currentCurrency = saved;
+        select.value = saved;
     }
 
     loadRates();
