@@ -32,10 +32,14 @@
         }
 
         .price {
-            opacity: 0.9;
+            opacity: 1;
             margin-bottom: 20px;
             font-size: 20px;
             color: #efe0e0;
+        }
+
+        .price.show {
+            animation: popX 0.4s ease;
         }
 
         .box {
@@ -43,17 +47,37 @@
             border: 1px solid rgba(255,255,255, 0.08);
             padding: 20px;
             border-radius: 12px;
+
+            opacity: 0;
+            transform: translateY(200px) scale(0.95);
+        }
+
+        .box.fade {
+            animation: popY 0.4s ease forwards;
         }
 
         select {
             background-color: rgba(255,255,255, 0.08);
             color: white;
             border: 1px solid rgba(255,255,255,0.04);
+
+            border-radius: 8px;
+            transition: border-color 0.2s;
+        }
+
+        select:hover {
+            border: 1px solid rgba(255,255,255, 0.1);
+        }
+
+        select:focus {
+            border: 1px solid #4f7cff;
         }
 
         option {
             background-color: #111;
             color: white;
+
+            border-radius: 8px;
         }
 
         .topbar {
@@ -63,6 +87,30 @@
 
         #currencySelect {
             margin-left: auto;
+        }
+
+        @keyframes popX {
+            0% {
+                transform: translateX(-50px) scale(0.95);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popY {
+            0% {
+                transform: translateY(200px) scale(0.95);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -77,6 +125,9 @@
                 <option value="USD">USD ($)</option>
                 <option value="GBP">GBP (£)</option>
                 <option value="SEK">SEK (kr)</option>
+                <option value="CAD">CAD (C$)</option>
+                <option value="CNY">CNY (CN¥)</option>
+                <option value="JPY">JPY (JP¥)</option>
             </select>
         </div>
 
