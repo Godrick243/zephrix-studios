@@ -7,7 +7,7 @@ const symbols = {
     GBP: "£",
     SEK: "kr",
     CAD: "C$",
-    CNY: "CN¥",
+    CNY: "CN¥", 
     JPY: "JP¥"
 }
 
